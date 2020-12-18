@@ -1,0 +1,49 @@
+﻿<Window x:Class="Struct.WindowTrains"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Struct"
+        mc:Ignorable="d"
+        Title="Поезд" Height="450" Width="800" Background="Thistle">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0.6*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Vertical"
+                    HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Label Content="Номер поезда"/>
+            <TextBox x:Name="numberTrain" Width="300"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Vertical"
+                    HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Label Content="Время прибытия"/>
+            <DatePicker x:Name="dateArrival" Width="300"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Vertical"
+                    HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Label Content="Время отбытия"/>
+            <DatePicker x:Name="dateDeparture" Width="300"/>
+        </StackPanel>
+        <StackPanel Grid.Row="2" Grid.Column="0" Orientation="Horizontal"
+                    HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Label Content="Направление"/>
+            <TextBox x:Name="direction" Width="140"/>
+        </StackPanel>
+        <StackPanel Grid.Row="2" Grid.Column="2" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Label Content="Расстояние"/>
+            <TextBox x:Name="distance" Width="140"/>
+        </StackPanel>
+        <StackPanel Grid.Row="3" Grid.ColumnSpan="2" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Button Content="OK" Width="100" Height="50" Click="Button_Click"/>
+            <Button Content="Cancel" Width="100" Height="50" Margin="10 0 0 0" Click="Button_Click_1"/>
+        </StackPanel>
+    </Grid>
+</Window>
